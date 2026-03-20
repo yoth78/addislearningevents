@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Addis Learning & Events</title>
+  <title>Addis Learning & Events | Learn Through Play</title>
   
   <style>
     /* ================= CSS VARIABLES ================= */
@@ -24,14 +24,14 @@
       --nav-bg-light: rgba(255, 255, 255, 0.95);
       
       /* Dark Mode Colors */
-      --bg-dark: #26395b;
-      --bg-dark-light: #26395b;
+      --bg-dark: #0a1928;
+      --bg-dark-light: #0f2336;
       --text-dark: #ffffff;
       --text-dark-muted: rgba(255, 255, 255, 0.85);
       --text-dark-light: rgba(255, 255, 255, 0.7);
       --card-bg-dark: rgba(255, 255, 255, 0.05);
       --card-border-dark: rgba(65, 190, 234, 0.2);
-      --nav-bg-dark: rgba(65, 190, 234, 0.2);
+      --nav-bg-dark: rgba(10, 25, 40, 0.95);
       
       /* Current Theme Variables (default to dark) */
       --bg-primary: var(--bg-dark);
@@ -47,7 +47,7 @@
       --gradient-primary: linear-gradient(135deg, var(--deep-blue) 0%, var(--blue) 50%, var(--light-blue) 100%);
       --gradient-dark: linear-gradient(135deg, var(--bg-dark) 0%, var(--deep-blue) 100%);
       --gradient-light: linear-gradient(135deg, var(--bg-light) 0%, var(--light-blue) 100%);
-      --gradient-glow: linear-gradient(90deg, transparent, rgba(21, 92, 118, 0.3), transparent);
+      --gradient-glow: linear-gradient(90deg, transparent, rgba(65, 190, 234, 0.3), transparent);
       
       /* Shadows & Glows */
       --glow-blue: 0 0 30px rgba(65, 190, 234, 0.5);
@@ -296,7 +296,7 @@
       box-shadow: var(--glow-intense);
     }
 
-    /* Theme Toggle Button - Improved */
+    /* Theme Toggle Button */
     .theme-toggle-container {
       display: flex;
       align-items: center;
@@ -375,11 +375,6 @@
       right: 8px;
     }
 
-    :root[data-theme="light"] .theme-toggle-icon {
-      color: var(--text-light);
-    }
-
-    /* Theme indicator text */
     .theme-indicator {
       font-size: 0.8rem;
       color: var(--text-light);
@@ -488,25 +483,6 @@
 
     .hero-title .gradient-text {
       display: inline-block;
-      margin: 0.5rem 0;
-    }
-
-    .hero-title span {
-      display: inline-block;
-      position: relative;
-    }
-
-    .hero-title span::after {
-      content: '';
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: linear-gradient(90deg, transparent, var(--electric-blue), transparent);
-      opacity: 0.5;
-      filter: blur(4px);
-      z-index: -1;
     }
 
     .hero-description {
@@ -521,40 +497,13 @@
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--light-blue);
-      margin: 2rem auto 3rem;
+      margin: 2rem auto 0;
       max-width: 800px;
       padding: 1rem;
       border-left: 3px solid var(--light-blue);
       background: var(--card-bg);
       border-radius: 0 10px 10px 0;
       animation: fadeInUp 1s ease-out 0.5s both;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 4rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--light-blue);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     /* ================= FEATURES SECTION ================= */
@@ -597,7 +546,6 @@
       padding: 0 2rem;
     }
 
-    /* Feature Card with Enhanced Transitions */
     .feature-card {
       background: var(--card-bg);
       backdrop-filter: blur(20px);
@@ -612,9 +560,9 @@
       animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
-    .feature-card:nth-child(1) { animation-delay: 0.5s; }
-    .feature-card:nth-child(2) { animation-delay: 0.5s; }
-    .feature-card:nth-child(3) { animation-delay: 0.3s; }
+    .feature-card:nth-child(1) { animation-delay: 0.2s; }
+    .feature-card:nth-child(2) { animation-delay: 0.3s; }
+    .feature-card:nth-child(3) { animation-delay: 0.4s; }
 
     .feature-card::before {
       content: '';
@@ -722,16 +670,6 @@
       transition: background-color 0.6s ease;
     }
 
-    .schools-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="%232E59A6" fill-opacity="0.05" d="M0,0H1000V1000H0Z"/><g fill="%2341BEEA" fill-opacity="0.03"><circle cx="200" cy="200" r="50"/><circle cx="800" cy="800" r="80"/><circle cx="500" cy="500" r="30"/></g></svg>');
-      z-index: -1;
-    }
-
     .schools-content {
       max-width: 1200px;
       margin: 0 auto;
@@ -745,7 +683,6 @@
       margin-top: 4rem;
     }
 
-    /* School Card with Enhanced Transitions */
     .school-card {
       background: var(--card-bg);
       border-radius: 20px;
@@ -758,9 +695,9 @@
       animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
-    .school-card:nth-child(1) { animation-delay: 0.1s; }
-    .school-card:nth-child(2) { animation-delay: 0.2s; }
-    .school-card:nth-child(3) { animation-delay: 0.3s; }
+    .school-card:nth-child(1) { animation-delay: 0.2s; }
+    .school-card:nth-child(2) { animation-delay: 0.3s; }
+    .school-card:nth-child(3) { animation-delay: 0.4s; }
 
     .school-card::before {
       content: '';
@@ -834,7 +771,6 @@
       padding: 0 2rem;
     }
 
-    /* Parent Card with Enhanced Transitions */
     .parent-card {
       background: var(--card-bg);
       border-radius: 20px;
@@ -847,9 +783,9 @@
       animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
-    .parent-card:nth-child(1) { animation-delay: 0.5s; }
-    .parent-card:nth-child(2) { animation-delay: 0.5s; }
-    .parent-card:nth-child(3) { animation-delay: 0.3s; }
+    .parent-card:nth-child(1) { animation-delay: 0.2s; }
+    .parent-card:nth-child(2) { animation-delay: 0.3s; }
+    .parent-card:nth-child(3) { animation-delay: 0.4s; }
 
     .parent-card::before {
       content: '';
@@ -955,7 +891,6 @@
       margin: 4rem 0;
     }
 
-    /* Contact Item with Enhanced Transitions */
     .contact-item {
       padding: 2rem;
       background: rgba(255, 255, 255, 0.1);
@@ -967,36 +902,9 @@
       animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
-    .contact-item:nth-child(1) { animation-delay: 0.1s; }
-    .contact-item:nth-child(2) { animation-delay: 0.2s; }
-    .contact-item:nth-child(3) { animation-delay: 0.3s; }
-
-    .contact-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
-      opacity: 0;
-      transition: opacity 0.6s ease;
-      border-radius: 20px;
-    }
-
-    .contact-item:hover::before {
-      opacity: 1;
-    }
-
-    .contact-item-content {
-      position: relative;
-      z-index: 2;
-      transition: var(--transition-card);
-    }
-
-    .contact-item:hover .contact-item-content {
-      transform: translateY(-5px);
-    }
+    .contact-item:nth-child(1) { animation-delay: 0.2s; }
+    .contact-item:nth-child(2) { animation-delay: 0.3s; }
+    .contact-item:nth-child(3) { animation-delay: 0.4s; }
 
     .contact-item:hover {
       background: rgba(255, 255, 255, 0.2);
@@ -1020,21 +928,11 @@
     .contact-item h3 {
       color: white;
       margin-bottom: 1rem;
-      transition: var(--transition-card);
-    }
-
-    .contact-item:hover h3 {
-      transform: translateY(-3px);
     }
 
     .contact-item p {
-      color: rgba(20, 16, 16, 0.85);
+      color: rgba(255, 255, 255, 0.85);
       margin-bottom: 0.5rem;
-      transition: var(--transition-card);
-    }
-
-    .contact-item:hover p {
-      color: rgb(18, 9, 9);
     }
 
     /* ================= FOOTER ================= */
@@ -1046,7 +944,6 @@
       transition: var(--transition-smooth);
     }
 
-    
     .footer h3 {
       color: var(--text-primary);
       margin-bottom: 1rem;
@@ -1059,13 +956,8 @@
     }
 
     /* ================= ANIMATIONS ================= */
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
-    }
-
     @keyframes rotate {
-      0% { transform: rotate(10deg); }
+      0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
 
@@ -1075,17 +967,6 @@
       }
       50% { 
         box-shadow: 0 0 0 20px rgba(65, 190, 234, 0);
-      }
-    }
-
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
       }
     }
 
@@ -1169,35 +1050,22 @@
         font-size: 1.2rem;
       }
       
-      .hero-stats {
-        gap: 2rem;
+      .feature-grid,
+      .schools-grid,
+      .parents-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
       }
       
-      .stat-number {
-        font-size: 2.5rem;
-      }
-      
-      .nav-cta {
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-      }
-      
-      /* Reduce animation delays on mobile */
       .feature-card,
       .school-card,
-      .parent-card,
-      .contact-item {
-        animation-delay: 0s !important;
+      .parent-card {
+        padding: 2rem 1.5rem;
       }
     }
 
     @media (max-width: 480px) {
       .nav-container {
-        padding: 0 1rem;
-      }
-      
-      .hero-content {
         padding: 0 1rem;
       }
       
@@ -1207,16 +1075,6 @@
       
       .hero-tagline {
         font-size: 1.1rem;
-      }
-      
-      .feature-grid,
-      .schools-grid,
-      .parents-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .stat-number {
-        font-size: 2rem;
       }
       
       .theme-toggle {
@@ -1231,12 +1089,6 @@
       .theme-toggle-slider {
         width: 20px;
         height: 20px;
-      }
-      
-      .feature-card,
-      .school-card,
-      .parent-card {
-        padding: 2rem 1.5rem;
       }
     }
 
@@ -1256,8 +1108,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="icon" href="logo.png" type="image/jpeg">
 </head>
 
 <body>
@@ -1266,7 +1116,7 @@
     <div class="nav-container">
       <a href="#home" class="logo">
         <div class="logo-icon">
-          <img src="logo.png" alt="Addis Learning & Events Logo" class="logo-image">
+          <img src="logo.png" alt="Addis Learning & Events Logo" class="logo-image" onerror="this.src='https://placehold.co/80x80/2E59A6/white?text=ALE'">
         </div>
         <span>Addis Learning & Events</span>
       </a>
@@ -1303,7 +1153,6 @@
     <div class="hero-glow"></div>
     
     <div class="hero-content">
-           
       <div class="hero-badge">
         <i class="fas fa-star"></i>
         Learning • Play • Human Connection
@@ -1324,7 +1173,6 @@
       <div class="hero-tagline">
         Designed for children who need confidence, curiosity, and connection—not more screen time.
       </div>
-      
     </div>
   </section>
 
@@ -1332,7 +1180,7 @@
   <section class="features" id="features">
     <div class="section-header">
       <h2 class="gradient-text">What We Do</h2>
-       </div>
+    </div>
     
     <div class="feature-grid">
       <div class="feature-card">
@@ -1372,7 +1220,6 @@
 
   <!-- Schools Section -->
   <section class="schools" id="schools">
-    <div class="schools-bg"></div>
     <div class="schools-content">
       <div class="section-header">
         <h2 class="gradient-text">For Schools</h2>
@@ -1451,39 +1298,32 @@
       
       <div class="contact-info">
         <div class="contact-item">
-          <div class="contact-item-content">
-            <div class="contact-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <h3>Phone</h3>
-            <p>Ethiopia: +251 92 060 7391</p>
-             </div>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-item-content">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <h3>Email</h3>
-            <p>info@addislearningevents.com</p>
-            
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
           </div>
+          <h3>Phone</h3>
+          <p>Ethiopia: +251 92 060 7391</p>
         </div>
         
         <div class="contact-item">
-          <div class="contact-item-content">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <h3>Location</h3>
-            <p>Addis Ababa, Ethiopia</p>
-            </div>
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>info@addislearningevents.com</p>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Location</h3>
+          <p>Addis Ababa, Ethiopia</p>
         </div>
       </div>
       
-      <a href="#contact" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 3rem;">
-        <i class="fas fa-rocket mr-2"></i>
+      <a href="#contact" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 3rem; display: inline-block;">
+        <i class="fas fa-rocket"></i>
         Start Your Learning Journey
       </a>
     </div>
@@ -1499,33 +1339,14 @@
   </footer>
 
   <script>
-    // Enhanced JavaScript with premium effects
-    
-    // Initialize floating elements
-    document.addEventListener('DOMContentLoaded', function() {
-      createFloatingElements();
-      initAnimations();
-      initParallax();
-      initMobileMenu();
-      initSmoothScroll();
-      initCardHoverEffects();
-      initStatsAnimation();
-      initCursorGlow();
-      initThemeToggle();
-    });
-    
     // Theme Toggle Functionality
     function initThemeToggle() {
       const themeToggle = document.getElementById('themeToggle');
-      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-      
-      // Check for saved theme or prefer user's system preference
       const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = prefersDarkScheme.matches;
       
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
-      } else if (systemPrefersDark) {
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
       }
       
@@ -1536,116 +1357,10 @@
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         
-        // Add click animation
         themeToggle.style.transform = 'scale(0.95)';
         setTimeout(() => {
           themeToggle.style.transform = '';
         }, 150);
-      });
-      
-      // Listen for system theme changes
-      prefersDarkScheme.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-          document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-        }
-      });
-    }
-    
-    // Create animated floating elements
-    function createFloatingElements() {
-      const container = document.createElement('div');
-      container.className = 'floating-elements';
-      document.body.appendChild(container);
-      
-      for (let i = 0; i < 8; i++) {
-        const el = document.createElement('div');
-        el.className = 'float-el';
-        
-        // Random properties
-        const size = Math.random() * 40 + 10;
-        const duration = Math.random() * 20 + 10;
-        const delay = Math.random() * 5;
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-        
-        el.style.cssText = `
-          position: fixed;
-          width: ${size}px;
-          height: ${size}px;
-          background: radial-gradient(circle, rgba(65, 190, 234, 0.2) 0%, transparent 70%);
-          border-radius: 50%;
-          pointer-events: none;
-          z-index: -1;
-          left: ${x}%;
-          top: ${y}%;
-          animation: float ${duration}s ease-in-out ${delay}s infinite;
-        `;
-        
-        container.appendChild(el);
-      }
-      
-      // Add floating animation to CSS
-      const style = document.createElement('style');
-      style.textContent = `
-        @keyframes float {
-          0%, 100% {
-            transform: translate(5, 5) rotate(10deg);
-            opacity: 0.5;
-          }
-          25% {
-            transform: translate(20px, -40px) rotate(90deg);
-            opacity: 0.8;
-          }
-          50% {
-            transform: translate(-30px, -20px) rotate(180deg);
-            opacity: 0.6;
-          }
-          75% {
-            transform: translate(40px, 30px) rotate(270deg);
-            opacity: 0.7;
-          }
-        }
-        
-        .theme-transitioning * {
-          transition: none !important;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-    
-    // Initialize scroll animations
-    function initAnimations() {
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.animation = 'slideIn 0.8s ease forwards';
-            entry.target.style.opacity = '1';
-          }
-        });
-      }, observerOptions);
-      
-      // Observe all feature cards and section headers
-      document.querySelectorAll('.feature-card, .school-card, .parent-card, .contact-item').forEach(el => {
-        el.style.opacity = '0';
-        observer.observe(el);
-      });
-    }
-    
-    // Parallax effect on scroll
-    function initParallax() {
-      const heroGlow = document.querySelector('.hero-glow');
-      if (!heroGlow) return;
-      
-      window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        heroGlow.style.transform = `translateY(${rate}px) rotate(${scrolled * 0.1}deg)`;
       });
     }
     
@@ -1670,29 +1385,12 @@
           mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
             '<i class="fas fa-times"></i>' : 
             '<i class="fas fa-bars"></i>';
-          
-          // Close menu when clicking outside
-          if (navLinks.classList.contains('active')) {
-            document.addEventListener('click', closeMenuOnClickOutside);
-          } else {
-            document.removeEventListener('click', closeMenuOnClickOutside);
-          }
         });
         
-        function closeMenuOnClickOutside(e) {
-          if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            document.removeEventListener('click', closeMenuOnClickOutside);
-          }
-        }
-        
-        // Close menu on link click
         document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
           link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            document.removeEventListener('click', closeMenuOnClickOutside);
+            if (mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
           });
         });
       }
@@ -1702,13 +1400,13 @@
     function initSmoothScroll() {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-          e.preventDefault();
+          const href = this.getAttribute('href');
+          if (href === '#') return;
           
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
+          const targetId = href;
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
+            e.preventDefault();
             window.scrollTo({
               top: targetElement.offsetTop - 80,
               behavior: 'smooth'
@@ -1718,84 +1416,12 @@
       });
     }
     
-    // Interactive hover effects for cards
-    function initCardHoverEffects() {
-      document.querySelectorAll('.feature-card, .school-card, .parent-card, .contact-item').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          
-          const rotateY = (x - centerX) / 25;
-          const rotateX = (centerY - y) / 25;
-          
-          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-        });
-      });
-    }
-    
-    // Cursor glow effect
-    function initCursorGlow() {
-      const cursor = document.createElement('div');
-      cursor.className = 'cursor-glow';
-      document.body.appendChild(cursor);
-      
-      document.addEventListener('mousemove', (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      });
-      
-      // Add cursor styles
-      const cursorStyle = document.createElement('style');
-      cursorStyle.textContent = `
-        .cursor-glow {
-          position: fixed;
-          width: 300px;
-          height: 300px;
-          background: radial-gradient(circle, rgba(65, 190, 234, 0.1) 0%, transparent 70%);
-          border-radius: 50%;
-          pointer-events: none;
-          transform: translate(-50%, -50%);
-          z-index: 9999;
-          mix-blend-mode: screen;
-          filter: blur(40px);
-          transition: width 0.3s, height 0.3s;
-        }
-        
-        a:hover ~ .cursor-glow,
-        button:hover ~ .cursor-glow {
-          width: 400px;
-          height: 400px;
-        }
-      `;
-      document.head.appendChild(cursorStyle);
-    }
-    
-    // Animate numbers in stats
-    function initStatsAnimation() {
-      const stats = document.querySelectorAll('.stat-number');
-      stats.forEach(stat => {
-        const finalValue = parseInt(stat.textContent);
-        let currentValue = 0;
-        const increment = finalValue / 50;
-        const timer = setInterval(() => {
-          currentValue += increment;
-          if (currentValue >= finalValue) {
-            clearInterval(timer);
-            stat.textContent = finalValue + (stat.textContent.includes('%') ? '%' : '+');
-          } else {
-            stat.textContent = Math.floor(currentValue) + (stat.textContent.includes('%') ? '%' : '+');
-          }
-        }, 50);
-      });
-    }
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', () => {
+      initThemeToggle();
+      initMobileMenu();
+      initSmoothScroll();
+    });
   </script>
 </body>
 </html>
